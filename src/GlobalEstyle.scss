@@ -1,0 +1,42 @@
+
+
+:root{
+
+--Luz_acessa:#fde40073;
+--Luz_apagada:  transparent;
+
+}
+
+*{
+
+margin: 0;
+padding: 0;
+}
+
+body{
+background-color: #252222;
+}
+
+#conteiner{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+width: 100%;
+height: 100vh;
+
+#controle-button{
+
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+max-width: 800px;
+width: 100%;
+padding: 2rem;
+border: 1px solid blue;
+}
+
+}

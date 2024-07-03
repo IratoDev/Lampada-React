@@ -1,0 +1,64 @@
+
+#Lampada{
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 80%;
+height: 80%;
+border: 1px solid red;
+
+#Area-Luz{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+width: 70%;
+height: 100%;
+background-color:(--Luz_apagada);
+border-radius: 100%;
+    
+}
+
+.luz-acesso{
+background-color: rgba(255, 255, 0, 0.171);
+    }
+    
+.luz-apagado{
+background-color:transparent;
+}
+
+#Luz{
+
+width: 300px;
+height: 300px;
+
+border: 1px solid #3b3b3b;
+border-radius: 100% 100% 70% 70%;
+
+}
+
+
+.Bocal{
+
+width: 100px;
+height: 100px;
+
+border: 1px solid #3b3b3b;
+border-radius: 0% 0% 30% 30%;
+background-color: #383838;
+
+}
+
+.lampada-acesso {
+    background-color: yellow;
+  }
+  
+  .lampada-apagado {
+    background-color: grey;
+  }
+
+}
