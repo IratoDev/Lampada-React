@@ -38,9 +38,7 @@ function App() {
 
 <div id="controle-button">
 
-<Buttons estado={"acender"}/>
-
-<Buttons estado={"apagar"}/>
+<Buttons/>
 
 </div>
 

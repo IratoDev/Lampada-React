@@ -19,7 +19,7 @@ setLuz(novoEstado)
 
 }}>
 
-{estado}
+{estado = Luz}
 
 </button>
 
