@@ -1,31 +1,28 @@
-
-import { Context } from "../../App"
-import "./style.css"
-
-export default function Buttons({estado}){
+import { Context } from "../../context/Context";
+import { useContext } from "react";
 
 
+export default function Buttons(){
+
+const {dispatch} = useContext(Context);
+
+const Style ={
+
+backgroundColor:"#333131",
+padding:"2em",
+borderRadius:"20px",
+color: "#fff",
+border: "none"
+}
 
 return(
 
-<Context.Consumer>
+<>
+<button style={Style} onClick={()=> dispatch({type:"acender"}) }>acender</button>
 
-{({Luz, setLuz})=>(
+<button style={Style} onClick={()=> dispatch({type:"apagar"})}>apagar</button>
+</>
 
-<button className="buttons" onClick={()=>{ 
-
-const novoEstado = (Luz === "acesso" ? "apagado" :"acesso");
-setLuz(novoEstado)
-
-}}>
-
-{estado = Luz}
-
-</button>
-
-)}
-
-</Context.Consumer>
 )
 
 }

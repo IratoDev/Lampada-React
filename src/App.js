@@ -1,34 +1,17 @@
 
-import { useState, createContext, useContext } from "react";
+//import { useContext } from "react";
+import Provider from "./context/Context";
 import Lampada from "./components/Lampada";
 import AreaLuz from "./components/Lampada";
-import Buttons from "./components/Buttons";
 import "./globalEstyle.css";
-
-export const Context = createContext();
-
-const ProviderContext =({children})=>{
-
-  const [Luz, setLuz] = useState("apagado");
-
-  return(
-
-<Context.Provider value={{Luz,setLuz}}>
-
-{children}
-
-</Context.Provider>
-
-  )
-
-};
+import Buttons from "./components/Buttons";
 
 function App() {
-
+ // const { dispatch } = useContext(Context);
 
   return (
   
-<ProviderContext>
+<Provider>
 
 <div id="conteiner">
 
@@ -43,7 +26,10 @@ function App() {
 </div>
 
 </div>
-</ProviderContext>
+
+</Provider>
+
+
   );
 }
 

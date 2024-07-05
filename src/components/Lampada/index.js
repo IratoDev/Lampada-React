@@ -1,26 +1,28 @@
-import { Context } from "../../App";
-import "./estyle.css";
+import { useContext } from "react";
+import {Context} from "../../context/Context";
+import "./style.css"
 
-export default function Lampada({acesso}){
+
+export default function Lampada(){
+
+const {state} = useContext(Context)
 
 return(
-<Context.Consumer>
-{({Luz, setLuz})=>(
 
+<>
 <div id="Lampada">
 
-<div id="Area-Luz" className={Luz === "acesso" ? "luz-acesso" : "luz-apagado"}>
+<div id="Area-Luz" className={state.acesso ? "luz-acesso" : "luz-apagado"}>
 
-<div id="Luz" className={Luz === "acesso" ? "lampada-acesso" : "lampada-apagado"}></div>
+<div id="Luz" className={state.acesso ? "lampada-acesso" : "lampada-apagado"}></div>
 <div className="Bocal"></div>
 
 </div>
 
 </div>
+</>
 
 
-)}
-</Context.Consumer>
 )
 
 }
